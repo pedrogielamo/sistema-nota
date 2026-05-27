@@ -1,6 +1,4 @@
-PEDRO - Média: 8
-   Situação: Aprovado
-GUI - Média: 4
+pedro - Média: 2
    Situação: Reprovado
 
-Resumo: 1 aprovados, 0 em recuperação, 1 reprovados.
+Resumo: 0 aprovados, 0 em recuperação, 1 reprovados.
