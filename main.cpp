@@ -59,8 +59,14 @@ int main() {
         cin.ignore();
 
         for (int i = 0; i < qntdAlunos; i++) {
-            cout << "Nome do aluno " << i + 1 << ": ";
-            getline(cin, nomes[i]);
+            do {
+                cout << "Nome do aluno " << i + 1 << ": ";
+                getline(cin, nomes[i]);
+                
+                if (nomes[i] == "") {
+                    cout << "Erro: O nome do aluno nao pode ficar em branco!" << endl;
+                }
+            } while (nomes[i] == "");
         }
 
         do {
