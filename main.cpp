@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <fstream>
 #include <windows.h>
+#include <ctime>
 
 using namespace std;
 
@@ -109,6 +110,9 @@ int main() {
 
         ofstream arquivo("relatorio.txt");
         if (arquivo.is_open()) {
+                time_t agora = time(0);
+                char* dataHora = ctime(&agora);
+                arquivo << "Data do relatorio: " << dataHora << endl;
             for (int i = 0; i < qntdAlunos; i++) {
                 arquivo << nomes[i] << " - Média: " << media[i] << endl;
                 if (media[i] >= 7) {
