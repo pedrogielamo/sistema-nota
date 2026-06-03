@@ -107,11 +107,25 @@ int main() {
             }
         }
 
+        int indiceMaior = 0;
+        int indiceMenor = 0;
+        for (int i = 1; i < qntdAlunos; i++) {
+            if (media[i] > media[indiceMaior]) {
+                indiceMaior = i;
+            }
+            if (media[i] < media[indiceMenor]) {
+                indiceMenor = i;
+            }
+        }
+
         cout << "==============================" << endl;
         cout << "RESUMO:" << endl;
         cout << "Alunos aprovados: " << alunosAprovados << endl;
         cout << "Alunos em recuperação: " << alunosRecuperacao << endl;
         cout << "Alunos reprovados: " << alunosReprovados << endl;
+        cout << "------------------------------" << endl;
+        cout << "Maior media: " << nomes[indiceMaior] << " (" << media[indiceMaior] << ")" << endl;
+        cout << "Menor media: " << nomes[indiceMenor] << " (" << media[indiceMenor] << ")" << endl;
         cout << "==============================" << endl;
 
         ofstream arquivo("relatorio.txt");
