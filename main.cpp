@@ -16,11 +16,21 @@ int main() {
     int qntdDisciplinas;
     int opcaoInicial;
 
-    cout << "=== SISTEMA DE NOTAS v4.0 ===" << endl;
-    cout << "1 - Novo relatorio" << endl;
-    cout << "2 - Ver relatorio salvo" << endl;
-    cout << "Escolha uma opção: ";
-    cin >> opcaoInicial;
+   do {
+        cout << "=== SISTEMA DE NOTAS v4.1 ===" << endl;
+        cout << "1 - Novo relatorio" << endl;
+        cout << "2 - Ver relatorio salvo" << endl;
+        cout << "3 - Sobre o sistema" << endl;
+        cout << "Escolha uma opção: ";
+        cin >> opcaoInicial;
+
+        if (opcaoInicial == 3) {
+            cout << "\n=== SOBRE ===" << endl;
+            cout << "Sistema de Notas v4.1" << endl;
+            cout << "Desenvolvido por:Pedro Gielamo" << endl;
+            cout << "Turma: LOPAL 2026 - SENAI-SP\n" << endl;
+        }
+    } while (opcaoInicial == 3);
 
     // LEITURA DE ARQUIVO (OPÇÃO 2)
     if (opcaoInicial == 2) {
